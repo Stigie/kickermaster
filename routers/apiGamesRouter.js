@@ -44,6 +44,10 @@ apiGamesRouter
     await gamesModule.finishGame({ gameId });
     ctx.body = { success: true };
   })
+  .post("/api/game/finishGame", async ctx => {
+    console.log("\n" + ctx.request.body.id + "\n");
+    ctx.body = { success: true };
+  })
   .post("/api/game/goal", async ctx => {
     // const { id: userId } = ctx.state.user;
     // const { gameId, ownGoal } = ctx.request.body;
